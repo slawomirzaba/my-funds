@@ -7,7 +7,7 @@
     "lint": "nx run-many -t lint",
     "type-check": "nx run-many -t type-check",
     "test": "nx run-many -t test",
-    "prettier": "prettier \"{apps,packages}/**/*.{ts,tsx,js,json}\" --ignore-path .gitignore",
+    "prettier": "prettier \"{apps,packages}/**/*.{ts,tsx,js,json}\"",
     "format:check": "yarn prettier --check",
     "format:write": "yarn prettier --write",
     "dev": "nx run-many -t dev"

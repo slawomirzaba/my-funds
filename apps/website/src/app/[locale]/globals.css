@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --background-color: 249 250 251;
+
+    --copy-primary-color: 17 24 39;
+    --copy-secondary-color: 107 114 128;
+    --link-color: 37 99 235;
+    --border-color: 209 213 219;
+    --card-color: 255 255 255;
+    --card-border-color: 209 213 219;
+
+    --input-bg-color: 249 250 251;
+    --input-border-color: 209 213 219;
+    --input-border-focus-color: 59 130 246;
+    --input-placeholder-color: 107 114 128;
+
+    --checkbox-bg-color: 249 250 251;
+    --checkbox-border-color: 209 213 219;
+    --checkbox-border-focus-color: 147 197 253;
+
+    --button-primary-bg-color: 37 99 235;
+    --button-primary-hover-bg-color: 29 78 216;
+    --button-primary-border-color: 37 99 235;
+    --button-primary-copy-color: 255 255 255;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: 17 24 39;
+
+        --copy-primary-color: 255 255 255;
+        --copy-secondary-color: 156 163 175;
+        --link-color: 59 130 246;
+        --border-color: 75 85 99;
+        --card-color: 31 41 55;
+        --card-border-color: 55 65 81;
+
+        --input-bg-color: 55 65 81;
+        --input-border-color: 75 85 99;
+        --input-border-focus-color: 59 130 246;
+        --input-placeholder-color: 156 163 175;
+
+        --checkbox-bg-color: 55 65 81;
+        --checkbox-border-color: 75 85 99;
+        --checkbox-border-focus-color: 59 130 246;
+
+        --button-primary-bg-color: 37 99 235;
+        --button-primary-hover-bg-color: 29 78 216;
+        --button-primary-border-color: 59 130 246;
+        --button-primary-copy-color: 255 255 255;
+    }
+}
+
+body {
+    background: rgb(var(--background-color));
+}

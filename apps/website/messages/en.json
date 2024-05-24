@@ -1,0 +1,21 @@
+{
+  "Register": {
+    "emailLabel": "Your email",
+    "passwordLabel": "Your password",
+    "passwordConfirmationLabel": "Confirm your password",
+    "registerButton": "Create an account",
+    "loginLinkPrefix": "Already have an account?",
+    "loginLink": "Log in here",
+    "header": "Create an account",
+    "acceptTermsPrefix": "I accept",
+    "acceptTermsLink": "the terms and conditions"
+  },
+  "Login": {
+    "emailLabel": "Your email",
+    "passwordLabel": "Your password",
+    "loginButton": "Log in",
+    "registerLinkPrefix": "Don't have an account?",
+    "registerLink": "Sign up here",
+    "header": "Log in"
+  }
+}
