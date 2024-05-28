@@ -1,3 +1,5 @@
+import { Link as NavigationLink } from '@/navigation';
+
 type Props = {
   href: string;
   children: string;
@@ -5,8 +7,11 @@ type Props = {
 
 export default function Link({ href, children }: Props) {
   return (
-    <a className="text-link font-medium hover:underline" href={href}>
+    <NavigationLink
+      className="text-link font-medium hover:underline"
+      href={href}
+    >
       {children}
-    </a>
+    </NavigationLink>
   );
 }

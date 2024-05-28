@@ -9,6 +9,7 @@ import Link from '@/components/Link';
 import Button from '@/components/Button';
 import Paragraph from '@/components/Paragraph';
 import { useTranslations } from 'next-intl';
+import { REGISTER_ROUTE } from '@/routes';
 
 export default function LoginPage() {
   const t = useTranslations('Login');
@@ -39,7 +40,8 @@ export default function LoginPage() {
           </FormControl>
           <Button type="submit">{t('loginButton')}</Button>
           <Paragraph variant={'secondary'} size={'sm'}>
-            {t('registerLinkPrefix')} <Link href="#">{t('registerLink')}</Link>
+            {t('registerLinkPrefix')}{' '}
+            <Link href={REGISTER_ROUTE}>{t('registerLink')}</Link>
           </Paragraph>
         </Form>
       </Card>

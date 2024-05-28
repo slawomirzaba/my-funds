@@ -10,6 +10,7 @@ import Button from '@/components/Button';
 import Paragraph from '@/components/Paragraph';
 import Heading from '@/components/Heading';
 import Card from '@/components/Card';
+import { LOGIN_ROUTE } from '@/routes';
 
 export default function RegisterPage() {
   const t = useTranslations('Register');
@@ -64,7 +65,8 @@ export default function RegisterPage() {
           </FormControl>
           <Button type="submit">{t('registerButton')}</Button>
           <Paragraph variant={'secondary'} size={'sm'}>
-            {t('loginLinkPrefix')} <Link href="#">{t('loginLink')}</Link>
+            {t('loginLinkPrefix')}{' '}
+            <Link href={LOGIN_ROUTE}>{t('loginLink')}</Link>
           </Paragraph>
         </Form>
       </Card>
