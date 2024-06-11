@@ -17,5 +17,11 @@
     "registerLinkPrefix": "Don't have an account?",
     "registerLink": "Sign up here",
     "header": "Log in"
+  },
+  "ModeToggle": {
+    "toggleTheme": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
   }
 }

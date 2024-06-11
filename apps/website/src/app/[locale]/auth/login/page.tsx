@@ -1,15 +1,10 @@
 import LogoLink from '@/components/LogoLink';
-import Card from '@/components/Card';
-import Heading from '@/components/Heading';
-import Form from '@/components/form/Form';
-import FormControl from '@/components/form/FormControl';
-import InputLabel from '@/components/form/InputLabel';
-import InputField from '@/components/form/InputField';
-import Link from '@/components/Link';
-import Button from '@/components/Button';
-import Paragraph from '@/components/Paragraph';
+import Link from '@/components/ui/Link';
+import Paragraph from '@/components/ui/Paragraph';
 import { useTranslations } from 'next-intl';
 import { REGISTER_ROUTE } from '@/routes';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import LoginForm from '@/app/[locale]/auth/login/_components/LoginForm';
 
 export default function LoginPage() {
   const t = useTranslations('Login');
@@ -18,32 +13,20 @@ export default function LoginPage() {
     <>
       <LogoLink />
       <Card>
-        <Heading>{t('header')}</Heading>
-        <Form>
-          <FormControl>
-            <InputLabel htmlFor="email">{t('emailLabel')}</InputLabel>
-            <InputField
-              type="email"
-              id="email"
-              placeholder="name@company.com"
-              required
-            />
-          </FormControl>
-          <FormControl>
-            <InputLabel htmlFor="password">{t('passwordLabel')}</InputLabel>
-            <InputField
-              type="password"
-              id="password"
-              placeholder="••••••••"
-              required
-            />
-          </FormControl>
-          <Button type="submit">{t('loginButton')}</Button>
-          <Paragraph variant={'secondary'} size={'sm'}>
-            {t('registerLinkPrefix')}{' '}
-            <Link href={REGISTER_ROUTE}>{t('registerLink')}</Link>
-          </Paragraph>
-        </Form>
+        <CardHeader>
+          <CardTitle>{t('header')}</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="space-y-4">
+            <LoginForm />
+            <Paragraph size={'sm'}>
+              {t('registerLinkPrefix')}{' '}
+              <Link href={REGISTER_ROUTE} muted>
+                {t('registerLink')}
+              </Link>
+            </Paragraph>
+          </div>
+        </CardContent>
       </Card>
     </>
   );

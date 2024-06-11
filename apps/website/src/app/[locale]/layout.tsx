@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
 import { getMessages } from 'next-intl/server';
 import { Inter } from 'next/font/google';
-import './globals.css';
+import '../globals.css';
 import { NextIntlClientProvider } from 'next-intl';
+import { ThemeProvider } from '@/components/ThemeProvider';
+import ModeToggle from '@/components/ModeToggle';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -23,7 +25,17 @@ export default async function RootLayout({
     <html lang={locale}>
       <body className={inter.className}>
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+            <div className="fixed bottom-0 right-0">
+              <ModeToggle />
+            </div>
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>
